@@ -1,0 +1,1 @@
+Took a lil bit of Google's help , tried to do it mostly by myself , when i tried to do mode and median imputation in one program , it was showing some error , couldnt figure out why , so just submitted with the mean portion. 
