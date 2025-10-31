@@ -64,7 +64,7 @@ pip install pandas numpy
 
 ## Authors
 
-- [@shauryasuyal](https://www.github.com/shauryasuyal;)
+- [@shauryasuyal](https://www.github.com/shauryasuyal)
 
 
 ## Feedback
