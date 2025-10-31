@@ -2,18 +2,18 @@ import pandas as pd
 
 data = {'Colour':['Red','Blue','Green','Blue','Red']}
 df = pd.DataFrame(data)
-colours = df['Colour'].unique()
+column_name = 'Colour'
+unique_vals = df[column_name].unique()
+encoded_df = pd.DataFrame()
 
-newdf = pd.DataFrame()
-for c in colours:
-    col = []
+for val in unique_vals:
+    col_data = []
     for i in range(len(df)):
-        if df.loc[i,'Colour'] == c:
-            col.append(1)
+        if df.loc[i, column_name] == val:
+            col_data.append(1)
         else:
-            col.append(0)
-    newdf['Colour '+c] = col
-
-final = pd.concat([df,newdf],axis=1)
+            col_data.append(0)
+    encoded_df[column_name + '_' + val] = col_data
+final_df = pd.concat([df, encoded_df], axis=1)
 print("After one hot encoding - ")
-print(final)
+print(final_df)
